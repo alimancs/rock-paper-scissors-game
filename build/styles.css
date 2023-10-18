@@ -1,0 +1,382 @@
+:root {
+   --ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+   --PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+   --RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+   --LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+   --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+   --DarkText: hsl(229, 25%, 31%);
+   --ScoreText: hsl(229, 64%, 46%);
+   --HeaderOutline: hsl(217, 16%, 45%);
+   --RadialGradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
+}
+body {
+    margin: 0px;
+    background-color:hsl(214, 47%, 23%) ;
+    background:radial-gradient(var(--RadialGradient));
+    display:grid;
+    place-content: center;
+    padding:0px;
+    overflow-x: hidden;                                                                       
+}
+#gameFace {
+    width:100%;
+    font-family: sans-serif;
+    display:grid;
+    place-content: center;
+    /* border:5px solid rgb(132, 221, 0); */
+}
+.mobile {
+    display:none;
+}
+#header {
+    border:2px solid white;
+    position: absolute;
+    top:35px;
+    height:80px;
+    width:350px;
+    left:50%;
+    margin-left:-175px;
+    border-radius: 9px;
+    color:white;
+    display:flex;
+    padding:5px;
+}
+.tbox {
+    height:inherit;
+    width:50%;
+}
+#gameName {
+    font-size: 14px;
+    font-weight: 600;
+}
+#headert {
+    display:flex;
+    flex-direction: column;
+}
+#scorebox {
+    display:flex;
+    place-items: center;
+}
+#sb {
+    height:inherit;
+    width:120px;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    place-content: center;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 54px;
+}
+#score {
+    color:var(--DarkText);
+    font-size: 45px;
+    font-weight: 700;
+}
+#stitle {
+    color:var(--ScoreText);
+}
+#rulesButton {
+    height:40px;
+    width:110px;
+    background-color: transparent;
+    border:2px solid white;
+    border-radius: 10px;
+    color:white;
+    position:absolute;
+    right:20px;
+    bottom:20px;
+}
+#rulesButton:hover {
+    background-color: white;
+    color:black;
+    border:none;
+}
+#userChoice {
+    height:400px;
+    width:350px;
+    margin-top: 150px;
+    background-image: url(bg-pentagon.svg);
+    background-repeat: no-repeat;
+    background-position-y: 60px;
+}
+.cbox {
+    height:calc((100%/3));
+}
+.userC {
+    height:120px;
+    width:120px;
+    border-radius: 50%;
+    border:20px solid black;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.userC:hover {
+    height:115px;
+    width:115px;
+}
+#scissors {
+    border-color: rgb(235, 196, 2);
+    background-image: url(icon-scissors.svg);
+}
+#spock {
+    border-color: rgb(2, 235, 208);
+    background-image: url(icon-spock.svg);
+    margin-right:102px;
+}
+#paper {
+    border-color: rgb(2, 122, 235);
+    background-image: url(icon-paper.svg);
+}
+#lizard {
+    border-color: rgb(136, 75, 207);
+    background-image: url(icon-lizard.svg);
+    margin-left: 30px;
+
+}
+#rock {
+    border-color: rgb(193, 4, 4);
+    background-image: url(icon-rock.svg);
+    margin-left: 30px;
+}
+#f1 {
+    display:grid;
+    place-content: center;
+}
+#judge {
+    height: 500px;
+    width:inherit;
+    display:flex;
+    flex-direction: row;
+    /* border:2px solid red; */
+    margin-top: 70px;
+    display:none;
+}
+#subj1, #subj2{
+    width:50%;
+    display:grid;
+    place-content: center;
+    text-align: center;
+    color:white;
+    font-weight: 600;
+    /* border:2px solid green; */
+}
+#subj1 {
+    margin-right:180px;
+}
+#subj2 {
+    /* margin-left:100px; */
+}
+#jt {
+    margin-bottom: 30px;
+    font-size: 15px;
+    margin-top: 30px;
+}
+#uc, #hc {
+
+    height:95px;
+    width:95px;
+    border-radius: 50%;
+    border:20px solid black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
+.in {
+    height:95px;
+    width:95px;
+    border-radius: 50%;
+    box-shadow: inset 0px 7px gray;  
+}
+#uc {
+    border-color: rgb(235, 196, 2);
+    box-shadow:0px 7px rgb(230, 154, 3);
+    background-image: url(icon-scissors.svg);
+}
+#hc {
+    border-color: rgb(136, 75, 207);
+    box-shadow:0px 7px rgb(100, 44, 165);
+    background-image: url(icon-lizard.svg);
+}
+#w4 {
+    width:360px;
+    height:360px;
+    display:grid;
+    place-content: center;
+    background-color: hsl(228, 73%, 19%);
+}
+#w3, #w30 {
+    width:280px;
+    height:280px;
+    display:grid;
+    place-content: center;
+    background-color: hsl(228, 48%, 22%);
+}
+#w2 {
+    width:210px;
+    height:210px;
+    display:grid;
+    place-content: center;
+    background-color: hsl(229, 36%, 26%);
+}
+#w1 {
+    width:130px;
+    height:130px;
+    background-color: hsl(229, 25%, 31%);
+}
+.wave1, .wave2 {
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+#hc, #uc {
+    visibility: visible;
+}
+#resultbx {
+    height:100px;
+    width:250px;
+    /* border:2px solid red; */
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    place-items: center;
+    place-self:center;
+    display:none;
+}
+#result {
+    font-size: 40px;
+    color:white;
+    font-weight:600;
+    text-align: center;
+}
+#playAgain {
+    width:210px;
+    height:40px;
+    font-size: 17px;
+    font-weight: 550;
+    color:var(--ScoreText);
+}
+#playAgain:hover {
+    width:208px;
+    height:38px;
+    cursor:pointer;
+}
+#rulesbx {
+    height: 107%;
+    width:100%;
+    position:absolute;
+    place-self: center;
+    background-color: rgba(0, 0, 0, 0.636);
+    display:none;
+    place-content: center;
+}
+#innerR {
+    width:400px;
+    height:450px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+#rtop {
+    height:50px;
+    display:flex;
+    flex-direction: row;
+}
+#rt, #rx {
+    width:50%;
+}
+#rh {
+    font-size: 30px;
+    color:var(--DarkText);
+    font-weight: 600;
+}
+#exitR {
+    height:40px;
+    width:40px;
+    background-image: url(icon-close.svg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-color: transparent;
+    margin-left:156px;
+    border:none;
+}
+#rules {
+    height:400px;
+    background-image: url(image-rules-bonus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.mobileE {
+    display: none;
+}
+@media (max-width:550px) {
+    #rulesButton {
+        right:50%;
+        margin-right: -55px;
+    }
+    #header {
+        width:338px;
+    }
+}
+@media (max-width:830px) {
+    #subj1, #subj2 {
+        margin-right:0px;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto;
+    }
+    #rulesbx {
+        height:150%;
+    }
+
+    #judge  {
+        width:420px;
+        margin-top:90px;
+    }
+    .mobile {
+        display:block;
+    }
+    .desk {
+        display:none;
+    }
+    /* #w3 {
+        height:250px;
+        width:250px ;
+    }
+    #w2 {
+        height: 180px;
+        width:180px ; 
+    }
+    #w1 {
+        height:100px ;
+        width:100px ; 
+    } */
+    #resultbx {
+        margin-top:600px;
+    }
+
+}
+@media (max-width:500px) {
+    #gameFace {
+        overflow-x: hidden;   
+    }
+    #innerR {
+        width:300px;
+        background-color: transparent;
+    }
+    #rulesbx {
+        background-color: white;
+    }
+    #rt {
+        width:100%;
+        display:flex;
+        place-content: center;
+    }
+    #exitR {
+        margin-left: 0px;
+    }
+    #rx {
+        display:none;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Rock paper scissor game</title>
+</head>
+<body>
+    <div id="gameFace">
+        <div id="header">
+            <div id="headert" class="tbox">
+                <span id="gameName">ROCK</span>
+                <span id="gameName">PAPER</span>
+                <span id="gameName">SCISSORS</span>
+                <span id="gameName">LIZARD</span>
+                <span id="gameName">SPOCK</span>
+            </div>
+            <div id="scorebox" class="tbox">
+                <div id="sb">
+                    <span id="stitle">SCORE</span>
+                    <span id="score">0</span>
+                </div>
+            </div>
+        </div>
+        <div id="userChoice">
+            <div class="cbox" id="f1">
+                <button onclick="decideResult(choice['scissors'])" class="userC" id="scissors"></button>
+            </div>
+            <div class="cbox" id="f2">
+                <button onclick="decideResult(choice['spock'])" class="userC"  id="spock"></button>
+                <button onclick="decideResult(choice['paper'])" class="userC"  id="paper"></button>
+            </div>
+            <div class="cbox" id="f2">
+                <button onclick="decideResult(choice['lizard'])" class="userC"  id="lizard"></button>
+                <button onclick="decideResult(choice['rock'])" class="userC"  id="rock"></button>
+            </div>
+            
+        </div>
+        <div id="judge">
+            <div id="subj1">
+                <span class="desk" id="jt">YOU PICKED</span>
+                <div class="wave1" id="w4">
+                    <div class="wave1" id="w3">
+                        <div class="wave1"  id="w2">
+                            <div class="wave1"  id="w1">
+                                <div id="uc">
+                                    <div class="in" id="inneruc"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="mobile" id="jt">YOU PICKED</span>
+            </div>
+            <div id="subj2">
+                <span class="desk" id="jt">THE HOUSE PICKED</span>
+                <div class="wave2" id="w4">
+                    <div class="wave2" id="w30">
+                        <div class="wave2"  id="w2">
+                            <div class="wave2"  id="w1">
+                                <div id="hc">
+                                    <div  class="in" id="innerhc"></div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="mobile" id="jt">THE HOUSE PICKED</span>
+            </div>
+        </div>
+        <button  onclick="rulesState('grid')" id="rulesButton">RULES</button>
+        <div id="resultbx">
+            <span id="result">YOU LOSE</span>
+            <button onclick="restart()" id="playAgain">PLAY AGAIN</button>
+        </div>
+        <div id="rulesbx">
+            <div id="innerR">
+                <div id="rtop">
+                    <div id="rt">
+                        <span id="rh">RULES</span>
+                    </div>
+                    <div id="rx">
+                        <button onclick="rulesState('none')" id="exitR"></button>
+                    </div>
+                </div>
+                <div id="rules">
+                    
+                </div>
+                <div class="mobileE" id="rt">
+                    <button onclick="rulesState('none')" id="exitR"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
